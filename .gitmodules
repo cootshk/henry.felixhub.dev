@@ -1,0 +1,3 @@
+[submodule "3rd/sailor"]
+	path = 3rd/sailor
+	url = https://github.com/cootshk/sailor.git
