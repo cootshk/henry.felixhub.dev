@@ -1,0 +1,7 @@
+# The louder you are, the less you hear.
+
+User-Agent: *
+Allow: /
+
+User-Agent: nsa
+Disallow: /
