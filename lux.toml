@@ -9,6 +9,7 @@ labels = [  ]
 license = "GPL-3.0"
 
 [dependencies]
+argparse = "0.7.1-1"
 # Add your dependencies here
 # `busted = ">=2.0"`
 

@@ -1,3 +1,28 @@
 {
-  "version": "1.0.0"
+  "version": "1.0.0",
+  "dependencies": {
+    "rocks": {
+      "d528cd52981564259b873ae3f972f48a19522d775240465725a6434109336b92": {
+        "name": "argparse",
+        "version": "0.7.1-1",
+        "pinned": false,
+        "opt": false,
+        "dependencies": [],
+        "constraint": "==0.7.1",
+        "binaries": [],
+        "source": "luarocks_rockspec+https://luarocks.org/",
+        "source_url": {
+          "type": "url",
+          "url": "https://github.com/luarocks/argparse/archive/0.7.1.zip"
+        },
+        "hashes": {
+          "rockspec": "sha256-6EUIYsWhm29xlL8arP/3DQoRj/1CYWxs/J8+gz9T0YQ=",
+          "source": "sha256-AJ8n6HTxqHPeQd0NKHiyQLzZ63+ebDsO1uP+0f0vYUE="
+        }
+      }
+    },
+    "entrypoints": [
+      "d528cd52981564259b873ae3f972f48a19522d775240465725a6434109336b92"
+    ]
+  }
 }
