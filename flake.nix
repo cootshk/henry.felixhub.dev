@@ -2,7 +2,7 @@
   description = "A very basic flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs?ref=nixpkgs-unstable";
     lux = {
       url = "github:nvim-neorocks/lux";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -22,6 +22,8 @@
       buildInputs = [
         lux.packages.x86_64-linux.default
         pkgs.luajit
+        # Lua package deps
+        pkgs.quictls
       ];
     };
 
