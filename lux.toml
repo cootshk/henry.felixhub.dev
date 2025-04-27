@@ -1,15 +1,16 @@
-package = "."
+package = "henry.felixhub.dev"
 version = "0.1.0"
 lua = ">=5.1"
 
 [description]
-summary = "henry.felixhub.dev"
+summary = "My website @ felixhub"
 maintainer = "Cootshk"
 labels = [  ]
 license = "GPL-3.0"
 
 [dependencies]
 argparse = "0.7.1-1"
+busted = "2.2.0-1"
 # Add your dependencies here
 # `busted = ">=2.0"`
 
