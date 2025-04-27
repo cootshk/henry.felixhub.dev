@@ -1,3 +1,0 @@
-[submodule "lux"]
-	path = lux
-	url = https://github.com/nvim-neorocks/lux
