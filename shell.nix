@@ -8,12 +8,35 @@ let
 in
 
 pkgs.mkShell {
-  buildInputs = [
-    rustpkgs.rustc
-    rustpkgs.cargo
+  buildInputs = with rustpkgs; [
+    rustc
+    cargo
+    cargo-binstall
+    gcc
+    rustfmt
+    clippy
+    # compiling lux
+    pkg-config
+    openssl
+    sqlite
+    luajit
+    libgpg-error
+    gpgme
   ];
   shellHook = ''
   echo "rust: $(rustc --version)"
   echo "cargo: $(cargo --version)"
+  export PATH=$PATH:''${CARGO_HOME:-~/.cargo/bin}
+
+  which lux > /dev/null
+  if [[ "$?" -ne 0 ]]; then
+    cargo install lux-cli --locked | tee install.log
+    if [[ "$?" -ne 0 ]]; then
+      echo "BUILD FAIL"
+      exit 1
+    fi
+  fi
   '';
+  RUST_SRC_PATH = "${rustpkgs.rust.packages.stable.rustPlatform.rustLibSrc}";
+  PKG_CONFIG_PATH = "${rustpkgs.openssl.dev}/lib/pkgconfig";
 }
