@@ -6,7 +6,7 @@
     <title>Simple HTML Page</title>
     <link rel="stylesheet" href="styles/main.css">
     <script src="scripts/main.js" defer></script>
-    <script src="/scripts/htmx.2.0.4.min.js"></script>
+    <script src="/scripts/htmx.2.0.4.min.js" integrity="sha384-HGfztofotfshcF7+8n44JQL2oJmowVChPTg48S+jvZoztPfvwD79OC/LTtG6dMp+"></script>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <meta name="description" content="Hi, I'm Henry.">
 </head>
@@ -68,10 +68,18 @@
             </section>
             <section id="contact">
                 <h2>Contact Me</h2>
-                <p>You can reach me at <a href="mailto:
+                <p>You can find me on: </p>
+                <ul id="contact-list">
+                    <li><a href="https://discord.gg/BFDWmPfmXg">Discord</a></li>
+                    <li><a href="https://reddit.com/u/cootshk">Reddit</a></li>
+                    <li><a href="https://github.com/cootshk">GitHub</a></li>
+                    <li><a href="https://linuxrocks.online/@cootshk">Mastodon</a></li>
+                    <li><a href="mailto:henry@felixhub.dev">Email</a></li>
+                </ul>
+            </section>
         </div>
     </main>
-    <footer>
+    <footer id="bottom">
         <p>&copy; 2025 felixhub.dev</p>
     </footer>
 </body>
