@@ -1,0 +1,7 @@
+#navbar {
+    display: grid;
+}
+.nav-item {
+    grid-row: 1;
+    grid-column: auto;
+}
