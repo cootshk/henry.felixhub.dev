@@ -11,6 +11,8 @@ license = "GPL-3.0"
 [dependencies]
 argparse = "0.7.1-1"
 busted = "2.2.0-1"
+lapis = "1.16.0-1"
+etlua = "1.3.0-1"
 # Add your dependencies here
 # `busted = ">=2.0"`
 
