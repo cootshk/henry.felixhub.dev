@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple HTML Page</title>
-    <link rel="stylesheet" href="styles/main.css">
-    <script src="scripts/main.js" defer></script>
+    <link rel="stylesheet" href="/styles/main.css">
+    <script src="/scripts/main.js" defer></script>
     <script src="/scripts/htmx.2.0.4.min.js" integrity="sha384-HGfztofotfshcF7+8n44JQL2oJmowVChPTg48S+jvZoztPfvwD79OC/LTtG6dMp+"></script>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <meta name="description" content="Hi, I'm Henry.">
 </head>
 <body>
@@ -22,7 +22,7 @@
     <main>
         <div class="container">
             <div id="profile-container">
-                <img src="images/rue.gif" alt="Profile Picture" class="profile-picture">
+                <img src="/images/rue.gif" alt="Rue my beloved" class="profile-picture">
                 <h1>Henry</h1>
                 <p>I write code sometimes.</p>
             </div>
@@ -43,26 +43,26 @@
                         <div class="project-title"><p>Project name</p></div>
                         <div class="project-body">Project description</div>
                         <div class="project-links">
-                            <a href="github"><img src="images/github.svg" alt="GitHub" class="project-icon"></a>
-                            <a href="https://discord.gg/discord"><img src="discord.svg" alt="Discord" class="project-icon"></a>
-                            <a href="https://youtube.com/channel/YouTubeChannel"><img src="youtube.svg" alt="YouTube" class="project-icon"></a>
-                            <a href="https://example.com"><img src="https://example.com/favicon.ico" alt="Website" class="project-icon"></a>
+                            <a class="logo" href="github"><img src="images/github.svg" alt="GitHub" class="project-icon"/></a>
+                            <a class="logo" href="https://discord.gg/discord"><img src="discord.svg" alt="Discord" class="project-icon"/></a>
+                            <a class="logo" href="https://youtube.com/channel/YouTubeChannel"><img src="youtube.svg" alt="YouTube" class="project-icon"/></a>
+                            <a class="logo" href="https://example.com"><img src="https://example.com/favicon.ico" alt="Website" class="project-icon"/></a>
                         </div>
                     </li> -->
                     <li class="project">
                         <div class="project-title"><p>Felixhub.dev</p></div>
                         <div class="project-body">This website!</div>
                         <div class="project-links">
-                            <a href="https://felixhub.dev"><img src="https://felixhub.dev/favicon.ico" alt="Website" class="project-icon"></a>
-                            <a href="https://discord.gg/BFDWmPfmXg"><img src="discord.svg" alt="Discord" class="project-icon"></a>
+                            <a class="logo" href="https://felixhub.dev"><img src="https://felixhub.dev/favicon.ico" alt="Website" class="project-icon"/></a>
+                            <a class="logo" href="https://discord.gg/VqUyKzAWAX"><img src="/images/discord.svg" alt="Discord" class="project-icon"/></a>
                         </div>
                     </li>
                     <li class="project">
                         <div class="project-title"><p>Prometheus</p></div>
                         <div class="project-body">A cosmetic unlocker for Lunar Client and Essential Mod</div>
                         <div class="project-links">
-                            <a href="https://github.com/prometheusreengineering"><img src="/images/github.svg" alt="GitHub" class="project-icon"></a>
-                            <a href="https://discord.gg/BFDWmPfmXg"><img src="discord.svg" alt="Discord" class="project-icon"></a>
+                            <a class="logo" href="https://github.com/prometheusreengineering"><img src="/images/github.svg" alt="GitHub" class="project-icon"/></a>
+                            <a class="logo" href="https://discord.gg/BFDWmPfmXg"><img src="/images/discord.svg" alt="Discord" class="project-icon"/></a>
                         </div>
                     </li>
                 </ul>
@@ -71,11 +71,11 @@
                 <h2>Contact Me</h2>
                 <p>You can find me on: </p>
                 <ul id="contact-list">
-                    <li><a href="https://discord.gg/BFDWmPfmXg">Discord</a></li>
-                    <li><a href="https://reddit.com/u/cootshk">Reddit</a></li>
-                    <li><a href="https://github.com/cootshk">GitHub</a></li>
-                    <li><a href="https://linuxrocks.online/@cootshk">Mastodon</a></li>
-                    <li><a href="mailto:henry@felixhub.dev">Email</a></li>
+                    <li><a class="logo" href="https://discord.gg/VqUyKzAWAX"><img src="/images/discord.svg"/>Discord</a></li>
+                    <li><a class="logo" href="https://reddit.com/u/cootshk"><img src="/images/reddit.svg"/>Reddit</a></li>
+                    <li><a class="logo" href="https://github.com/cootshk"><img src="/images/github.svg"/>GitHub</a></li>
+                    <li><a class="logo" href="https://linuxrocks.online/@cootshk"><img src="/images/mastodon.svg"/>Mastodon</a></li>
+                    <li><a class="logo" href="mailto:henry@felixhub.dev"><img src="/images/mail.svg"/>Email</a></li>
                 </ul>
             </section>
         </div>
