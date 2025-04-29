@@ -15,17 +15,28 @@
                 <img src="/images/alaska.webp" alt="Background Image" id="background-image"/>
             </div>
         </div>
-        <div id="overlay">
-            <div class="glass" id="profile-container">
-                <img src="/images/rue.gif" alt="Rue my beloved" class="profile-picture" id="pfp">
-                <div id="profile-side">
-                    <h1>Henry</h1>
-                    <span class="subtitle">Cootshk</span>
-                    <p>I write code sometimes.</p>
+        <div id="overlay-container">
+            <div id="overlay">
+                <div id="profile-container">
+                    <div class="glass" id="profile">
+                        <img src="/images/rue.gif" alt="Rue my beloved" class="profile-picture" id="pfp">
+                        <div id="profile-side">
+                            <h1 id="name">Henry</h1>
+                            <span class="subtitle" id="username">@Cootshk</span>
+                            <!-- <div class="popout hidden" id="user-copy-popout"><span>Copied!</span></div> -->
+                            <p>I write code sometimes.</p>
+                        </div>
+                    </div>
+                    <div class="glass" id="button-list">
+                        <button class="nav" id="projects-button" hx-get="/html/projects.html" hx-target="#target" hx-swap="innerHTML">Projects</button>
+                        <button class="nav" id="contact-button" hx-get="/html/contact.html" hx-target="#target" hx-swap="innerHTML">Contact</button>
+                        <button class="nav" id="photos-button" hx-get="/html/photos.html" hx-target="#target" hx-swap="innerHTML">Photos</button>
+                    </div>
+                    <div class="glass" id="target"></div>
                 </div>
             </div>
         </div>
-        <footer>
+        <footer class="glass" id="copyright">
             <span class="footer-text">&copy; 2025 felixhub.dev.</span>
             <span class="footer-text">All rights reserved.</span>
             <span class="footer-text">Made with &hearts; and a lot of root beer.</span>
