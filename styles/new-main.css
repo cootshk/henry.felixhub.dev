@@ -118,8 +118,8 @@
     margin: 0;
 }
 .logo {
-    width: 25%;
-    height: auto;
+    width: auto;
+    height: 25%;
 }
 #contact {
     display: flex;
@@ -130,8 +130,8 @@
     height: 10vh;
 }
 .contact-logo {
-    /* height: 100%; */
-    /* min-height: 20px; */
+    height: 100%;
+    min-height: 20px;
     width: auto;
 }
 /*
