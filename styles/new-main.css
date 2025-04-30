@@ -113,7 +113,7 @@
     width: auto;
     height: 100%;
     margin: 0px 10px;
-    /* border-radius: 10px !important; */
+    border-radius: 10px !important;
     background-color: rgba(181, 181, 181, 0.9);
 }
 #contact {
@@ -132,12 +132,15 @@
 #discord-container {
     border-radius: 50px;
     background-color: rgba(115, 137, 220, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
 }
 #discord-logo {
     /* the discord logo isn't square for some reason */
-    width: auto;
-    height: auto;
     border-radius: 0px !important;
+    padding: 5%;
 }
 #github-container {
     border-radius: 50px;
@@ -145,6 +148,9 @@
 #github-logo {
     border-radius: 10px;
     background-color: rgb(0,0,0);
+}
+#reddit-container {
+    background-color: rgba(255,69,0,255);
 }
 /*
 #contact-list {
