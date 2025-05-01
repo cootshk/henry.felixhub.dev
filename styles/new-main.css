@@ -216,9 +216,8 @@
 #mastodon-container {
     background-color: #6364f1;
 }
-#mastodon-logo {
-    border-radius: 10px;
-    /* background-color: #6364f1; */
+#modrinth-container {
+    background-color: #00af5c; 
 }
 /*
 #contact-list {
