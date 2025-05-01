@@ -172,8 +172,17 @@
     border-radius: 10px;
     background-color: rgb(0,0,0);
 }
+#reddit-logo {
+    border-radius: 10px;
+    background-color: hsla(16, 100%, 50%, 1);
+    /* get rid of shadow */
+    box-shadow: none;
+    text-shadow: none;
+    width: 100%;
+    object-fit: cover;
+}
 #reddit-container {
-    background-color: rgba(255,69,0,255);
+    background-color: hsla(16, 100%, 50%, 1);
 }
 /*
 #contact-list {
