@@ -52,3 +52,18 @@ $('username').onclick = function() {
         }
     }, $('username').classList.contains('large-shake') ? 3000 : 2000);
 }
+
+// mobileLayoutChanges = function() {
+//     // console.log("Window resized");
+//     if (isOnMobile()) {
+//         $('projects-button').attributes['hx-get'].value = '/html/projects-mobile.html';
+//         $('contact-button').attributes['hx-get'].value = '/html/contact-mobile.html';
+//         $('photos-button').attributes['hx-get'].value = '/html/photos-mobile.html';
+//     } else {
+//         $('projects-button').attributes['hx-get'].value = '/html/projects.html';
+//         $('contact-button').attributes['hx-get'].value = '/html/contact.html';
+//         $('photos-button').attributes['hx-get'].value = '/html/photos.html';
+//     }
+// }
+// document.addEventListener('resize',mobileLayoutChanges);
+// document.addEventListener('DOMContentLoaded', mobileLayoutChanges);

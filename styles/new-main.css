@@ -1,3 +1,11 @@
+:root {
+    --contact-grid-rows: 2;
+    --contact-grid-columns: 3;
+}
+.mobile { /* override :root for mobile */
+    --contact-grid-rows: 3;
+    --contact-grid-columns: 2;
+}
 .hidden {
     display: none !important;
 }
@@ -41,8 +49,11 @@
 #profile-container {
     right: 0;
     padding: 5%;
+    padding-top: 0px;
     margin: 5%;
-    width: fit-content;
+    margin-top: 0px;
+    /* width: fit-content; */
+    width: 40vw;
     display: grid;
     height: fit-content;
 }
@@ -111,7 +122,7 @@
 }
 #target {
     padding: 10px;
-    margin: 5%;
+    margin: 0px 5%;
     width: 100%;
     border-radius: 10px;
 }
@@ -132,18 +143,32 @@
     align-items: center;
     justify-content: center;
 }
-#contact {
+/* #contact {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     padding: 20px;
     height: 10vh;
+} */
+ #contact {
+    display: grid;
+    grid-template-columns: repeat(var(--contact-grid-columns), minmax(0, 1fr));
+    grid-template-rows: repeat(var(--contact-grid-rows), minmax(0, 1fr));
+    align-items: center;
+    justify-items: center;
+    padding: 20px;
+    height: fit-content;
+    width: fit-content;
+    grid-gap: 5%;
+    gap: 5%;
 }
 .contact-logo {
     height: 100%;
     min-height: 20px;
     width: auto;
+    max-width: 90%;
+    max-height: 90%;
 }
 /* #discord-container {
     background-color: rgba(115, 137, 220, 1);
@@ -162,19 +187,19 @@
 }
 #discord-logo {
     border-radius: 10px;
-    background-color: rgba(115, 137, 220, 1);
+    /* background-color: rgba(115, 137, 220, 1); */
     padding: 0px 5%;
 }
 #github-container {
-    background-color: rgba(0,0,0,255);
+    background-color: rgba(0,0,0,1);
 }
 #github-logo {
     border-radius: 10px;
-    background-color: rgb(0,0,0);
+    /* background-color: rgb(0,0,0); */
 }
 #reddit-logo {
     border-radius: 10px;
-    background-color: hsla(16, 100%, 50%, 1);
+    /* background-color: hsla(16, 100%, 50%, 1); */
     /* get rid of shadow */
     box-shadow: none;
     text-shadow: none;
@@ -183,6 +208,17 @@
 }
 #reddit-container {
     background-color: hsla(16, 100%, 50%, 1);
+}
+
+#steam-container {
+    background-color: black;
+}
+#mastodon-container {
+    background-color: #6364f1;
+}
+#mastodon-logo {
+    border-radius: 10px;
+    /* background-color: #6364f1; */
 }
 /*
 #contact-list {
