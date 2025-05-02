@@ -1,10 +1,15 @@
 :root {
     --contact-grid-rows: 2;
     --contact-grid-columns: 3;
+    overflow: hidden;
+    --background-width: 100vw;
+    --background-height: auto;
 }
 .mobile { /* override :root for mobile */
     --contact-grid-rows: 3;
     --contact-grid-columns: 2;
+    --background-width: auto;
+    --background-height: 100vh;
 }
 
 .hidden {
@@ -37,10 +42,10 @@
 
 #background-image {
     position: fixed;
-    bottom: 0;
+    top: 0;
     left: 0;
-    width: 100vw;
-    height: auto;
+    width: var(--background-width);
+    height: var(--background-height);
     z-index: -1;
 }
 #overlay {
