@@ -1,0 +1,22 @@
+{
+    "$schema": "projects.schema.json",
+    "projects": [
+        {
+            "name": "Prometheus",
+            "description": "An all-in-one cosmetic unlocker for Lunar Client and Essential Mod.",
+            "links": {
+                "github": "https://github.com/prometheusreengineering/",
+                "discord": "https://discord.gg/5Z2c6a3"
+            }
+        },
+        {
+            "name": "Felixhub.dev",
+            "description": "This website!",
+            "links": {
+                "url": "https://felixhub.dev",
+                "github": "https://github.com/Feelfeel2008/felixhub.dev",
+                "discord": "https://discord.felixhub.dev"
+            }
+        }
+    ]
+}

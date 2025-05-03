@@ -1,0 +1,48 @@
+{
+    "$id": "projects.schema.json",
+    "title": "Projects Schema",
+    "description": "Schema for the /api/projects.json file",
+    "projects": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "Name of the project"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Description of the project"
+                },
+                "links": {
+                    "type": "object",
+                    "properties": {
+                        "url": {
+                            "type": "string",
+                            "format": "uri",
+                            "description": "URL of the project"
+                        },
+                        "github": {
+                            "type": "string",
+                            "format": "uri",
+                            "description": "GitHub repository URL for the project"
+                        },
+                        "discord": {
+                            "type": "string",
+                            "format": "uri",
+                            "description": "Discord server URL for the project"
+                        },
+                        "modrinth": {
+                            "type": "string",
+                            "format": "uri",
+                            "description": "Modrinth project URL"
+                        }
+                    }
+                }
+            },
+            "required": ["name", "links"]
+        }
+    }
+}
