@@ -1,3 +1,80 @@
-<h1>Site under construction.</h1>
-<p>Coming soon&trade;</p>
-<h6>See the current development version <a href="/new-main.html">here</a>.</h6>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Simple HTML Page</title>
+        <link rel="stylesheet" href="/styles/index.css">
+        <script src="/scripts/common.js"></script>
+        <script src="/scripts/index.js" defer></script>
+        <script src="/scripts/htmx.2.0.4.min.js" integrity="sha384-HGfztofotfshcF7+8n44JQL2oJmowVChPTg48S+jvZoztPfvwD79OC/LTtG6dMp+"></script>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+        <div id="background-container">
+            <div id="background">
+                <img src="/images/alaska.webp" alt="Background Image" id="background-image"/>
+            </div>
+        </div>
+        <div id="overlay-container">
+            <div id="overlay">
+                <div id="profile-container">
+                    <div class="glass" id="profile">
+                        <img src="/images/rue.gif" alt="Rue my beloved" class="profile-picture" id="pfp">
+                        <div id="profile-side">
+                            <h1 id="name">Henry</h1>
+                            <span class="subtitle" id="username">@Cootshk</span>
+                            <!-- <div class="popout hidden" id="user-copy-popout"><span>Copied!</span></div> -->
+                            <p>I write code. Sometimes it works.</p>
+                        </div>
+                    </div>
+                    <div class="glass" id="button-list">
+                        <button class="nav" id="projects-button" hx-get="/html/projects.html" hx-target="#target" hx-swap="innerHTML" onclick="document.location.hash = '#projects'">Projects</button>
+                        <button class="nav" id="contact-button"  hx-get="/html/contact.html"  hx-target="#target" hx-swap="innerHTML" onclick="document.location.hash = '#contact'" >Contact</button>
+                        <button class="nav" id="photos-button"   hx-get="/html/photos.html"   hx-target="#target" hx-swap="innerHTML" onclick="document.location.hash = '#photos'"  >Photos</button>
+                    </div>
+                    <div class="glass" id="target"></div>
+                </div>
+            </div>
+        </div>
+        <footer class="glass" id="copyright">
+            <span class="footer-text">&copy; 2025 felixhub.dev.</span>
+            <span class="footer-text">All rights reserved.</span>
+            <span class="footer-text">Made with &hearts; and a lot of root beer.</span>
+        </footer>
+        <script defer>
+        (() => {
+            // jump to
+            // #projects, #contact, #photos
+            const buttons = document.querySelectorAll('.nav');
+            const target = $('target');
+            var page;
+            console.log(document.location.hash);
+            if (document.location.hash) {
+                if (document.location.hash === '#projects') {
+                    page = '/html/projects.html';
+                } else if (document.location.hash === '#contact') {
+                    page = '/html/contact.html';
+                } else if (document.location.hash === '#photos') {
+                    page = '/html/photos.html';
+                } else {
+                    return;
+                }
+                fetch(page)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.text();
+                    })
+                    .then(data => {
+                        target.innerHTML = data;
+                    })
+                    .catch(error => {
+                        console.error('There was a problem with the fetch operation:', error);
+                    });
+            }
+        })();
+        </script>
+    </body>
+</html>
