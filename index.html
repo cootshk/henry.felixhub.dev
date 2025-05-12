@@ -6,8 +6,11 @@
         <title>Simple HTML Page</title>
         <link rel="stylesheet" href="/styles/index.css">
         <script src="/scripts/common.js"></script>
+        <script src="/scripts/projects.js"></script>
+        <script src="/scripts/contact.js"></script>
+        <script src="/scripts/photos.js"></script>
         <script src="/scripts/index.js" defer></script>
-        <script src="/scripts/htmx.2.0.4.min.js" integrity="sha384-HGfztofotfshcF7+8n44JQL2oJmowVChPTg48S+jvZoztPfvwD79OC/LTtG6dMp+"></script>
+<!--        <script src="/scripts/htmx.2.0.4.min.js" integrity="sha384-HGfztofotfshcF7+8n44JQL2oJmowVChPTg48S+jvZoztPfvwD79OC/LTtG6dMp+"></script>-->
         <link rel="icon" href="/favicon.ico" type="image/x-icon">
     </head>
     <body>
@@ -28,11 +31,18 @@
                             <p>I write code. Sometimes it works.</p>
                         </div>
                     </div>
+                    <noscript>
+                        <div class="glass" id="noscript">
+                            <p>Please enable JavaScript to use these buttons!</p>
+                        </div>
+                    </noscript>
+                    <!--sse-->
                     <div class="glass" id="button-list">
-                        <button class="nav" id="projects-button" hx-get="/html/projects.html" hx-target="#target" hx-swap="innerHTML" onclick="document.location.hash = '#projects'">Projects</button>
-                        <button class="nav" id="contact-button"  hx-get="/html/contact.html"  hx-target="#target" hx-swap="innerHTML" onclick="document.location.hash = '#contact'" >Contact</button>
-                        <button class="nav" id="photos-button"   hx-get="/html/photos.html"   hx-target="#target" hx-swap="innerHTML" onclick="document.location.hash = '#photos'"  >Photos</button>
+                        <button class="nav" id="projects-button" onclick="loadSubPage('projects')">Projects</button>
+                        <button class="nav" id="contact-button"  onclick="loadSubPage('contact')" >Contact</button>
+                        <button class="nav" id="photos-button"   onclick="loadSubPage('photos')"  >Photos</button>
                     </div>
+                    <!--/sse-->
                     <div class="glass" id="target"></div>
                 </div>
             </div>
@@ -42,39 +52,5 @@
             <span class="footer-text">All rights reserved.</span>
             <span class="footer-text">Made with &hearts; and a lot of root beer.</span>
         </footer>
-        <script defer>
-        (() => {
-            // jump to
-            // #projects, #contact, #photos
-            const buttons = document.querySelectorAll('.nav');
-            const target = $('target');
-            var page;
-            console.log(document.location.hash);
-            if (document.location.hash) {
-                if (document.location.hash === '#projects') {
-                    page = '/html/projects.html';
-                } else if (document.location.hash === '#contact') {
-                    page = '/html/contact.html';
-                } else if (document.location.hash === '#photos') {
-                    page = '/html/photos.html';
-                } else {
-                    return;
-                }
-                fetch(page)
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error('Network response was not ok');
-                        }
-                        return response.text();
-                    })
-                    .then(data => {
-                        target.innerHTML = data;
-                    })
-                    .catch(error => {
-                        console.error('There was a problem with the fetch operation:', error);
-                    });
-            }
-        })();
-        </script>
     </body>
 </html>

@@ -16,6 +16,11 @@
                     "type": "string",
                     "description": "Description of the project"
                 },
+                "icon": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "URL of the project's icon"
+                },
                 "links": {
                     "type": "object",
                     "properties": {
@@ -42,7 +47,55 @@
                     }
                 }
             },
-            "required": ["name", "links"]
+            "required": ["name", "description", "icon", "links"]
+        }
+    },
+    "contributions": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "Name of the contribution"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Description of the contribution"
+                },
+                "icon": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "URL of the contribution's icon"
+                },
+                "links": {
+                    "type": "object",
+                    "properties": {
+                        "url": {
+                            "type": "string",
+                            "format": "uri",
+                            "description": "URL of the contribution"
+                        },
+                        "github": {
+                            "type": "string",
+                            "format": "uri",
+                            "description": "GitHub repository URL for the contribution"
+                        },
+                        "discord": {
+                            "type": "string",
+                            "format": "uri",
+                            "description": "Discord server URL for the contribution"
+                        },
+                        "modrinth": {
+                            "type": "string",
+                            "format": "uri",
+                            "description": "Modrinth project URL"
+                        }
+                    }
+                }
+            },
+            "required": ["name", "description", "icon", "links"]
         }
     }
 }
